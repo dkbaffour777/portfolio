@@ -83,6 +83,10 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+.main-content-wrapper section:first-child {
+    margin-top: 30px;
+}
+
 .main-content-wrapper section h2{
     border-bottom: 1px solid #EEE;
     display: inline-block;
@@ -227,8 +231,4 @@ footer p {
         background-image: url('../images/background-theme.jpg');
         background-position: right;
     }
-}
-
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
 }
