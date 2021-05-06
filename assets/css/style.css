@@ -107,7 +107,7 @@ header nav ul li a:hover {
 }
 
 .web-app {
-    flex: 1 10%;
+    flex: 1 30%;
     height: 350px;
     margin: 3%;
     position: relative;
