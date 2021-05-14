@@ -75,7 +75,7 @@ header nav ul li a:hover {
 
 /* .main-content-wrapper */
 .main-content-wrapper {
-    width: 68%;
+    width: 58%;
     padding-right: 2%;
 }
 
@@ -100,7 +100,6 @@ header nav ul li a:hover {
 
 .work-cont {
     width: 80%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
