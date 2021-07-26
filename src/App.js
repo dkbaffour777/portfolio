@@ -1,16 +1,17 @@
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Project from "./components/Project/Project";
-import Contact from "./components/Contact/Contact";
-import Resume from "./components/Resume/Resume";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Header";
+import About from "./components/About";
+import ProjectList from "./components/ProjectList";
+import Contact from "./components/Contact";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
+import projectListData from "./Data";
 
 const App = () => {
   return (
     <>
       <Header />
       <div className="main-content-wrapper">
-        <Project />
+        <ProjectList projectListData={projectListData} />
       </div>
       <Footer />
     </>

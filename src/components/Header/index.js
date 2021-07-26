@@ -1,4 +1,4 @@
-import Nav from '../Nav/Nav';
+import Nav from '../Nav';
 import profile_pic from '../../assets/images/profile-picture.jpg'
 
 const Header =()=> {
