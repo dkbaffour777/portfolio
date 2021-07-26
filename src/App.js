@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
@@ -65,19 +66,6 @@ const App = () => {
                     <img src="./assets/images/work-day-scheduler.PNG" alt="work-day-scheduler"/>
                 </article>
             </div>
-        </section>
-        <section id="contact-me">
-            <h2>Contact</h2>
-            <address className="contact-info">
-                <div id="email">
-                    <img src="./assets/images/email.png" alt="email"/>
-                    <a href="mailto:dkbaffour@gmail.com">dkbaffour@gmail.com</a>
-                </div>
-                <div id="call">
-                    <img src="./assets/images/call.png" alt="call"/>
-                    <p>+1 602 571 9734</p>
-                </div>
-            </address>
         </section>
       </div>
       <Footer />
