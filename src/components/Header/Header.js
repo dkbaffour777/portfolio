@@ -4,11 +4,10 @@ import profile_pic from '../../assets/images/profile-picture.jpg'
 const Header =()=> {
     return (
         <header>
-            <div class="dark-layer primary-dl"></div>
-            <div class="logo-wrapper">
-                <img src={profile_pic} alt="Daniel Baffour"/>
+            <div className="dark-layer primary-dl"></div>
+            <div className="logo-wrapper">
                 <h1>
-                    Daniel Baffour <br/> <span id="title"></span>
+                    Daniel Baffour <br/> <span id="title">Full Stact Web Developer</span>
                 </h1>
             </div>
             <Nav />
