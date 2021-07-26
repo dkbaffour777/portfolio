@@ -1,3 +1,4 @@
+import Nav from '../Nav/Nav';
 import profile_pic from '../../assets/images/profile-picture.jpg'
 import header_bImg from '../../assets/images/background-theme.jpg'
 
@@ -11,19 +12,7 @@ const Header =()=> {
                     Daniel Baffour <br/> <span id="title"></span>
                 </h1>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#about-me">About</a>
-                    </li>
-                    <li>
-                        <a href="#work">Work</a>
-                    </li>
-                    <li>
-                        <a href="#contact-me">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            <Nav />
         </header>  
     );
 }
