@@ -1,8 +1,8 @@
-function App() {
+import Header from "./components/Header/Header";
+
+const App =()=> {
   return (
-    <div className="App">
-      <h1>hellow</h1>
-    </div>
+    <Header />
   );
 }
 
