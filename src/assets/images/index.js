@@ -5,7 +5,7 @@ import weatherDashboard from './weather-dashboard.png';
 import noteTaker from './noteTaker.png';
 import timedQuiz from './timed-quiz.PNG';
 
-export default {
+const project_images = {
     techBlog,
     inventoryTracker,
     budgetTracker,
@@ -13,3 +13,5 @@ export default {
     noteTaker,
     timedQuiz,
 }
+
+export default project_images;

@@ -1,21 +1,22 @@
 
+const Nav = ({currentPage, setCurrentPage}) => {
+    const navLinks = ['About me', 'Portfolio', 'Contact', 'Resume']
 
-const Nav = () => {
     return (
         <nav>
             <ul>
-                <li>
-                    <a href="#">About me</a>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#">Resume</a>
-                </li>
+                {
+                    navLinks.map((link, i)=>
+                        <li 
+                            key={i}
+                            onClick={() => setCurrentPage(link)}
+                        >
+                            <button className={currentPage === link ? "navLink active" : "navLink"}>
+                                {link}
+                            </button>
+                        </li>
+                    )
+                }
             </ul>
         </nav>
     );

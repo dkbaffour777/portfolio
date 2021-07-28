@@ -1,11 +1,6 @@
-import profile_pic from '../../assets/images/profile-picture.jpg'
-
 const About = () => {
     return (
-        <section id="about-me">
-            <div className="logo-wrapper" style={{ margin: "20px auto" }}>
-                <img className="prof-pic" src={profile_pic} alt="Daniel Baffour" />
-            </div>
+        <section id="about-me" className="main-sec">
             <h2>About me</h2>
             <p>
                 Full Stack Web Developer with experience earning a certificate in full stack web development from the
@@ -24,5 +19,9 @@ const About = () => {
         </section>
     );
 }
+
+{/* <div className="featured-pp">
+<img className="prof-pic" src={profile_pic} alt="Daniel Baffour" />
+</div> */}
 
 export default About;

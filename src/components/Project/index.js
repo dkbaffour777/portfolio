@@ -1,30 +1,39 @@
-import React from "react";
-import { FaGithub, FaWrench, FaLink } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaGithub, FaWrench, FaLink, FaArrowLeft } from 'react-icons/fa';
 
 const Project = ({ project }) => {
-    const { proj_id, deployedLink, name, technologies, imgSource } = project;
+    const { proj_id, deployedLink, gitHubLink, name, technologies, imgSource } = project;
+    const [isTools, setIsTools] = useState(false);
+
     return (
         <article id={proj_id} key={proj_id} className="web-app">
 
             <div className="app-info dark-layer">
-                <h3>{name}</h3>
-                {false &&
-
-                    <p>
-                        {
-                            technologies.map(tech => (
-                                <span style={{ border: '1px solid white', padding: '10px', margin: '5px', borderRadius: '3px' }}>
-                                    {tech}
-                                </span>
-                            ))
-                        }
-                    </p>
+                {isTools ?
+                    <>
+                        <div style={{width: '100%', paddingLeft: '2%', paddingTop: '2%', cursor: 'pointer'}}>
+                            <FaArrowLeft onClick={() => setIsTools(false)}/>
+                        </div>
+                        <p>
+                            {
+                                technologies.map(tech => (
+                                    <span style={{ border: '1px solid white', padding: '10px', margin: '5px', borderRadius: '3px' }}>
+                                        {tech}
+                                    </span>
+                                ))
+                            }
+                        </p>
+                    </>
+                    :
+                    <>
+                        <h3>{name}</h3>
+                        <div style={{ width: '30%', display: 'flex', justifyContent: 'space-evenly' }}>
+                            <a href={gitHubLink} target="_blank" rel="noreferrer" style={{ color: '#fff' }}><FaGithub /></a>
+                            <a href={deployedLink} target="_blank" rel="noreferrer" style={{ color: '#fff' }}><FaLink /></a>
+                            <FaWrench onClick={()=> setIsTools(true)} style={{cursor: 'pointer'}} />
+                        </div>
+                    </>
                 }
-                <div style={{ width: '30%', display: 'flex', justifyContent: 'space-evenly' }}>
-                    <FaGithub />
-                    <a href={deployedLink} target="_blank" rel="noreferrer" style={{color: '#fff'}}><FaLink /></a>
-                    <FaWrench />
-                </div>
             </div>
             <img src={imgSource} alt={name} />
         </article>

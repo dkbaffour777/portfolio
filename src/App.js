@@ -1,17 +1,18 @@
+import React, {useState} from "react";
 import Header from "./components/Header";
-import About from "./components/About";
-import ProjectList from "./components/ProjectList";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
+import AppNavgiation from "./components/AppNavigation";
 import Footer from "./components/Footer";
-import projectListData from "./Data";
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState('About me');
+
   return (
     <>
-      <Header />
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       <div className="main-content-wrapper">
-        <ProjectList projectListData={projectListData} />
+        <AppNavgiation 
+          currentPage={currentPage} 
+        />
       </div>
       <Footer />
     </>

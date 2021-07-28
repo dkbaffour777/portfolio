@@ -3,7 +3,7 @@ import phone_icon from '../../assets/images/call.png'
 
 const Contact =()=> {
     return (
-        <section id="contact-me">
+        <section id="contact-me" className="main-sec">
             <h2>Contact</h2>
             <address className="contact-info">
                 <div id="email">
