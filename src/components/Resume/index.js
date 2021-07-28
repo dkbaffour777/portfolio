@@ -1,4 +1,5 @@
 import Tech from "../Tech";
+import  resumeLink  from "../../assets/docs/resume.danielbaffour.pdf"
 
 const Resume = () => {
     const frontEnd = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'Bootstrap', 'Responsive design', 'React'];
@@ -7,7 +8,7 @@ const Resume = () => {
         <section className="main-sec">
             <h2>Resume</h2>
             <div style={{margin: '40px auto'}}>
-                Download my <a href="/images/myw3schoolsimage.jpg" download>resume</a>
+                Download my <a href={resumeLink} target="_blank" rel="noopener noreferrer" download>resume</a>
             </div>
             <h3>Front-end Proficiencies</h3>
             <div style={{margin: '40px auto'}}>
