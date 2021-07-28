@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tech from "../Tech";
 import { FaGithub, FaWrench, FaLink, FaArrowLeft } from 'react-icons/fa';
 
 const Project = ({ project }) => {
@@ -15,13 +16,7 @@ const Project = ({ project }) => {
                             <FaArrowLeft onClick={() => setIsTools(false)}/> <div style={{marginLeft: '10px'}}>Tools/Technologies</div>
                         </div>
                         <p>
-                            {
-                                technologies.map(tech => (
-                                    <span key={tech} style={{ border: '1px solid white', padding: '10px', margin: '5px', borderRadius: '3px' }}>
-                                        {tech}
-                                    </span>
-                                ))
-                            }
+                            <Tech technologies={technologies} themeColor={'White'}/>
                         </p>
                     </>
                     :

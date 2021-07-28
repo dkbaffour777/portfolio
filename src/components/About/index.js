@@ -18,10 +18,7 @@ const About = ({ setCurrentPage }) => {
                 team to build better experiences on software applications. <br />
                 Passionate about music, piano playing to be specific, which has had a major impact of my life by improving my self-confidence and discipline.
                 I’m excited to leverage my skills in the future as part of a fast-paced, quality-driven team. Reach out
-                to me to chat about our next project
-                <a onClick={() => setCurrentPage('Contact')} style={{ color: 'rgb(29, 80, 0)', fontWeight: 'bold', marginLeft: '2px' }}>
-                    here.
-                </a>
+                to me to chat about our next project<a onClick={() => setCurrentPage('Contact')}> <span>here.</span></a>
             </p>
         </section>
     );
