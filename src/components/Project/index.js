@@ -11,13 +11,13 @@ const Project = ({ project }) => {
             <div className="app-info dark-layer">
                 {isTools ?
                     <>
-                        <div style={{width: '100%', paddingLeft: '2%', paddingTop: '2%', cursor: 'pointer'}}>
-                            <FaArrowLeft onClick={() => setIsTools(false)}/>
+                        <div style={{width: '100%', paddingLeft: '2%', paddingTop: '2%', cursor: 'pointer', display: 'flex', alignItems: 'center'}}>
+                            <FaArrowLeft onClick={() => setIsTools(false)}/> <div style={{marginLeft: '10px'}}>Tools/Technologies</div>
                         </div>
                         <p>
                             {
                                 technologies.map(tech => (
-                                    <span style={{ border: '1px solid white', padding: '10px', margin: '5px', borderRadius: '3px' }}>
+                                    <span key={tech} style={{ border: '1px solid white', padding: '10px', margin: '5px', borderRadius: '3px' }}>
                                         {tech}
                                     </span>
                                 ))

@@ -3,7 +3,10 @@
 const Resume = () => {
     return (
         <section className="main-sec">
-            <h1>Resume</h1>
+            <span>Download my resume</span>
+            <h1>Profeciencies</h1>
+            <h2>Front-end Technologies</h2>
+            <h2>Back-end Technologies</h2>
         </section>
     );
 }

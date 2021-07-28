@@ -12,6 +12,7 @@ const App = () => {
       <div className="main-content-wrapper">
         <AppNavgiation 
           currentPage={currentPage} 
+          setCurrentPage={setCurrentPage}
         />
       </div>
       <Footer />

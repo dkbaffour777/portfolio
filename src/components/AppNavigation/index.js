@@ -4,10 +4,10 @@ import Contact from "../Contact";
 import Resume from "../Resume";
 import projectListData from "../../Data";
 
-const AppNavgiation = ({currentPage}) => {
+const AppNavgiation = ({currentPage, setCurrentPage}) => {
     switch (currentPage) {
       case 'About':
-        return <About />
+        return <About setCurrentPage={setCurrentPage}/>
       case 'Portfolio':
         return <ProjectList projectListData={projectListData}/>
       case 'Contact':
@@ -15,7 +15,7 @@ const AppNavgiation = ({currentPage}) => {
       case 'Resume':
         return <Resume />
       default:
-        return <About />;
+        return <About setCurrentPage={setCurrentPage}/>;
     }
 }
 

@@ -169,25 +169,37 @@ header nav ul li a{
     width: 100%;
 }
 
-.contact-info {
+#contact-form {
+    width: 400px;
+}
+
+#contact-form div{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 20px auto;
 }
 
-.contact-info div {
-    margin-right: 5%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
+.f-inp {
+    border: none;
+    margin: 10px 0px;
+    padding: 15px;
+    background-color: #EEE;
 }
 
-#email a {
-    text-decoration: none;
-    color: #000;
+.error-text {
+    color: red;
+    font-style: italic;
 }
 
-.contact-info div img{
-    margin-right: 10px;
+#contact-form button {
+    border: none;
+    border-radius: 3px;
+    padding: 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: rgb(29, 80, 0);
+    font-weight: 600;
+    cursor: pointer;
 }
 /* .main-content-wrapper end */
 
@@ -221,7 +233,7 @@ footer p {
 }
   
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
     #root {
         flex-direction: column;
         justify-content: space-between;
