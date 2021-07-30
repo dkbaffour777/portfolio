@@ -11,11 +11,11 @@ const Resume = () => {
                 Download my <a href={resumeLink} target="_blank" rel="noopener noreferrer" download>resume</a>
             </div>
             <h3>Front-end Proficiencies</h3>
-            <div style={{margin: '40px auto'}}>
+            <div style={{display: 'flex', flexWrap: 'wrap', margin: '40px auto'}}>
                 <Tech technologies={frontEnd} themeColor={'black'} />
             </div>
             <h3>Back-end Proficiencies</h3>
-            <div style={{margin: '40px auto'}}>
+            <div style={{display: 'flex', flexWrap: 'wrap', margin: '40px auto'}}>
                 <Tech technologies={backEnd} themeColor={'black'} />
             </div>
         </section>
