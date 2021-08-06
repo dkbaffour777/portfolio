@@ -1,20 +1,30 @@
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Nav = ({currentPage, setCurrentPage}) => {
+const Nav = () => {
     const navLinks = ['About me', 'Portfolio', 'Contact', 'Resume']
+    const [activeLink, setActiveLink] = useState('about');
+
+    const location = useLocation();
+    
+    useEffect(()=> {
+        const currentLocation = location.pathname.slice(1)
+        currentLocation ? setActiveLink(currentLocation) : setActiveLink('about')
+    }, [location])
 
     return (
         <nav>
             <ul>
                 {
                     navLinks.map((link, i)=>
-                        <li 
+                        <Link 
+                            to={link.split(' ')[0].toLowerCase()}
                             key={i}
-                            onClick={() => setCurrentPage(link)}
                         >
-                            <button className={currentPage === link ? "navLink active" : "navLink"}>
+                            <button className={activeLink === link.split(' ')[0].toLowerCase() ? "navLink active" : "navLink"}>
                                 {link}
                             </button>
-                        </li>
+                        </Link>
                     )
                 }
             </ul>

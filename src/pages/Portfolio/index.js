@@ -1,6 +1,7 @@
-import Project from "../Project";
+import Project from "../../components/Project";
+import projectListData from "../../Data";
 
-const ProjectList = ({ projectListData }) => {
+const ProjectList = () => {
     return (
         <section id="work" className="main-sec">
             <h2>Projects</h2>

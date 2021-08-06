@@ -78,14 +78,10 @@ header nav {
     margin-top: 30%;
     z-index: 999;
 }
-header nav ul li{
-    margin-top: 30px;
-    list-style: none;
-}
 
-header nav ul li a{
-    text-decoration: none;
-    color: #fff;
+header nav ul a{
+    display: block;
+    margin-top: 30px;
 }
 
 .navLink {
