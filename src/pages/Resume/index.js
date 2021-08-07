@@ -1,5 +1,5 @@
 import Tech from "../../components/Tech";
-import  resumeLink  from "../../assets/docs/resume.DanielBaffour.pdf"
+import  resumeLink  from "../../assets/docs/resume.danielbaffour.pdf"
 
 const Resume = () => {
     const frontEnd = ['HTML', 'CSS', 'JavaScript', 'JQuery', 'Bootstrap', 'Responsive design', 'React'];

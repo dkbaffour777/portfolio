@@ -79,14 +79,16 @@ header nav {
     z-index: 999;
 }
 
-header nav ul a{
-    display: block;
-    margin-top: 30px;
+.navLink a{
+    text-decoration: none;
+    font-style: normal;
+    color: #fff;
 }
 
 .navLink {
+    display: block;
+    margin-top: 30px;
     border: none; 
-    color: #fff;
     background-color: transparent; 
     font-weight: 200; 
     font-size: 14px;
@@ -284,12 +286,9 @@ footer p {
     header nav ul{
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         padding-bottom: 10px;
-    }
-
-    header nav ul li a {
-        font: bold;
     }
 
     .main-content-wrapper {
