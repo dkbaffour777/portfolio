@@ -7,15 +7,15 @@ const Resume = () => {
     return (
         <section className="main-sec">
             <h2>Resume</h2>
-            <div style={{margin: '40px auto'}}>
+            <div id="res-dwld">
                 Download my <a href={resumeLink} target="_blank" rel="noopener noreferrer" download>resume</a>
             </div>
             <h3>Front-end Proficiencies</h3>
-            <div style={{display: 'flex', flexWrap: 'wrap', margin: '40px auto'}}>
+            <div className="tech-cont">
                 <Tech technologies={frontEnd} themeColor={'black'} />
             </div>
             <h3>Back-end Proficiencies</h3>
-            <div style={{display: 'flex', flexWrap: 'wrap', margin: '40px auto'}}>
+            <div className="tech-cont">
                 <Tech technologies={backEnd} themeColor={'black'} />
             </div>
         </section>

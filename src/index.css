@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Varela Round', sans-serif;
 }
 
 a {
@@ -12,9 +15,6 @@ a {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -31,7 +31,6 @@ header {
     left: 0px;
     width: 30%;
     height: 100vh;
-    background-image: url('./assets/images/background-theme.jpg');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -43,46 +42,52 @@ header {
     height: 100%;
     position: absolute;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #000;
+    background-color: rgba(255, 255, 255, .9);
 }
 
 .logo-wrapper {
     z-index: 999;
-    color: #fff;
     display: flex;
     flex-direction: column;
     padding: 30px 0px;
 }
+
 .logo-wrapper h1 {
     font-size: 20px;
-    font-weight: normal;
+    font-weight: bolder;
 }
+
+#logo {
+    width: 30px;
+    height: 30px;
+}
+
 #title { 
-    font-style: italic;
     font-size: 15px; 
+    font-weight: normal;
 }
 
 .prof-pic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
-    letter-spacing: 2px;
     z-index: 999;
-    margin-top: 20px;
+    margin: auto;
+}
+
+#about-me p {
+    margin: auto;
 }
 
 header nav {
-    margin-top: 30%;
     z-index: 999;
 }
 
 .navLink a{
     text-decoration: none;
     font-style: normal;
-    color: #fff;
+    color: #000;
 }
 
 .navLink {
@@ -103,11 +108,10 @@ header nav {
 /* .main-content-wrapper */
 .main-content-wrapper {
     width: 70%;
-    padding-left: 5%;
 }
 
 .main-sec {
-    margin-bottom: 130px;
+    padding-top: 2%;
 }
 
 .main-sec:first-child {
@@ -120,10 +124,20 @@ header nav {
     padding-bottom: 8px;
 }
 
+#res-dwld {
+    margin: 40px auto;
+}
+
 
 #about-me p{
     padding-top: 10px;
     width: 90%;
+}
+
+#work {
+    background-color: #fafafa;
+    padding: 5%;
+    margin: 0px;
 }
 
 .work-cont {
@@ -133,20 +147,21 @@ header nav {
     justify-content: space-between;
 }
 
-.web-app {
+.app-info {
     flex: 1 30%;
     height: 350px;
     margin: 3%;
     position: relative;
     overflow: hidden;
-    box-shadow: 1px 1px #EEE;
+    border-radius: 10px;
 }
 
-.web-app:first-child {
+.app-info:first-child {
     flex: 12 100%;
 }
 
 .app-info {
+    position: relative;
     top: 0px;
     color: #fff;
     display: flex;
@@ -155,7 +170,6 @@ header nav {
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .app-info p {
@@ -165,18 +179,18 @@ header nav {
     flex-wrap: wrap;
 }
 
+.tech-cont {
+    display: flex;
+    margin: 40px auto;
+}
+
 .tech {
     padding: 10px;
     margin: 5px;
     border-radius: 3px;
 }
 
-.web-app img{
-    width: 150%;
-    transition: 0.3s;
-}
-
-.web-app:hover img{
+.app-info img{
     width: 100%;
 }
 
@@ -199,7 +213,6 @@ header nav {
 
 .error-text {
     color: red;
-    font-style: italic;
 }
 
 #contact-form button {
@@ -208,7 +221,7 @@ header nav {
     padding: 15px;
     color: #fff;
     font-size: 0.9rem;
-    background-color: rgb(29, 80, 0);
+    background-color: #000;
     font-weight: 600;
     cursor: pointer;
 }
@@ -216,7 +229,7 @@ header nav {
 
 /* footer */
 footer {
-    color: #fff;
+    color: #000;
     padding: 30px;
     font-size: 20px;
     position: fixed;
@@ -240,7 +253,7 @@ footer p {
     z-index: 999;
 }
 
-#ft-icons a { color: #fff; }
+#ft-icons a { color: #000; }
 /* footer end */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -248,7 +261,7 @@ footer p {
     .work-cont{
         width: 100%;
     }
-    .web-app {
+    .app-info {
         flex: 1 100%;
         height: 250px;
     }
@@ -259,28 +272,18 @@ footer p {
     #root {
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
     }
 
     header {
-        position: relative;
         width: 100%;
-        height: unset;
-        justify-content: space-between;
+        position: unset;
+        padding: unset;
     }
 
-    header::before, footer::before{
-        content: "";
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
+    .logo-wrapper h1 {
         width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-    }
-
-    .primary-dl {
-        display: none;
+        flex-direction: row;
+        text-align: center;
     }
 
     header nav ul{
@@ -291,13 +294,44 @@ footer p {
         padding-bottom: 10px;
     }
 
+    .main-sec h2 {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    .main-sec h3 {
+        text-align: center;
+    }
+
+    #res-dwld {
+        text-align: center;
+    }
+
+    .tech-cont {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 40px auto;
+    }
+
     .main-content-wrapper {
         width: 90%;
         margin: 30px auto;
     }
 
+    .prof-pic {
+        width: 20vw;
+        height: 20vw;
+        margin: auto;
+    }
+
     #contact-form {
-        width: 80%;
+        margin: auto;
+    }
+
+    #contact-form button {
+        width: 100%;
     }
 
     .tech {
@@ -309,7 +343,12 @@ footer p {
         font-size: unset;
         width: 100%;
         text-align: center;
-        background-image: url('./assets/images/background-theme.jpg');
-        background-position: right;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    #contact-form {
+        width: 90%;
     }
 }
