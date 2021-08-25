@@ -1,60 +1,19 @@
-import React, { useState } from 'react';
-import { validateEmail } from '../../utils/helpers';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-
-    const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message } = formState;
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
-
-    const handleChange = (e) => {
-        if (e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
-            if (!isValid) {
-                setErrorMessage('Your email is invalid.');
-            } else {
-                setErrorMessage('');
-            }
-        } else {
-            if (!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
-            } else {
-                setErrorMessage('');
-            }
-        }
-        if (!errorMessage) {
-            setFormState({ ...formState, [e.target.name]: e.target.value });
-        }
-    };
-
-
     return (
         <section className="main-sec">
             <h2 data-testid="h2tag">Contact me</h2>
-            <form id="contact-form" onSubmit={handleSubmit}>
+            <address id="contact-info">
                 <div>
-                    <label htmlFor="name">Name:</label>
-                    <input className="f-inp" type="text" name="name" defaultValue={name} onBlur={handleChange} />
+                    <span><FaEnvelope style={{marginRight: "10px"}}/> Send me an email: </span>
+                    <a href="mailto:dkbaffour777career@gmail.com">dkbaffour777career@gmail.com</a>
                 </div>
                 <div>
-                    <label htmlFor="email">Email address:</label>
-                    <input className="f-inp" type="email" name="email" defaultValue={email} onBlur={handleChange} />
+                    <span><FaPhone style={{marginRight: "10px"}}/> Or a text message: </span>
+                    <span>(602) 571 9734</span>
                 </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea className="f-inp" name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-                </div>
-                {errorMessage && (
-                    <div>
-                        <p className="error-text">{errorMessage}</p>
-                    </div>
-                )}
-                <button data-testid="button" type="submit">Submit</button>
-            </form>
+            </address>
         </section>
     );
 }

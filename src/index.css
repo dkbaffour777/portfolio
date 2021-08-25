@@ -30,8 +30,6 @@ header {
     top: 0px;
     left: 0px;
     width: 30%;
-    height: 100vh;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     padding-left: 4%;
@@ -73,11 +71,6 @@ header {
     height: 10vw;
     border-radius: 50%;
     z-index: 999;
-    margin: auto;
-}
-
-#about-me p {
-    margin: auto;
 }
 
 header nav {
@@ -126,6 +119,12 @@ header nav {
 
 #res-dwld {
     margin: 40px auto;
+}
+
+
+#about-me {
+    width: 80%;
+    margin: auto;
 }
 
 
@@ -194,36 +193,19 @@ header nav {
     width: 100%;
 }
 
-#contact-form {
-    width: 400px;
+#contact-info {
+    font-style: normal;
 }
 
-#contact-form div{
+#contact-info div {
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    margin: 20px auto;
 }
 
-.f-inp {
-    border: none;
-    margin: 10px 0px;
-    padding: 15px;
-    background-color: #EEE;
-}
-
-.error-text {
-    color: red;
-}
-
-#contact-form button {
-    border: none;
-    border-radius: 3px;
-    padding: 15px;
-    color: #fff;
-    font-size: 0.9rem;
-    background-color: #000;
-    font-weight: 600;
-    cursor: pointer;
+#contact-info div span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* .main-content-wrapper end */
 
@@ -326,12 +308,16 @@ footer p {
         margin: auto;
     }
 
-    #contact-form {
+    #about-me {
+        width: unset;
+    }
+
+    #about-me p {
         margin: auto;
     }
 
-    #contact-form button {
-        width: 100%;
+    #contact-info div {
+        justify-content: center;
     }
 
     .tech {
